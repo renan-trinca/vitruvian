@@ -99,7 +99,7 @@ def run_demo():
     import yaml
     from minisweagent import package_dir
     agent_config = yaml.safe_load(Path(package_dir / "config" / "default.yaml").read_text())["agent"]
-    agent_config["max_steps"] = 10
+    agent_config["step_limit"] = 10
 
     agent = VitruvianAgent(
         model=MockModel(),
